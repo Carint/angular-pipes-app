@@ -10,4 +10,6 @@ export class BasicosComponent {
   nombreLower: string = 'Carlos';
   nombreUpper: string = 'caRlos';
   nombre: string = 'carlos interiano';
+
+  fecha: Date = new Date(); // el dia de hoy
 }
