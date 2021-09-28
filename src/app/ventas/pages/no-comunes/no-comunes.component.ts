@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { interval } from 'rxjs';
 
 import { PrimeNGConfig } from 'primeng/api';
 
@@ -47,4 +48,35 @@ export class NoComunesComponent implements OnInit {
       this.clientes.pop();
   }
 
+  // KeyValue Pipe
+  persona = {
+    nombre: 'Carlos',
+    edad: 36,
+    direccion: 'Copán, Honduras'
+  }
+
+  // JsonPipe
+  heroes = [
+    {
+      nombre: 'Superman',
+      vuela: true
+    },
+    {
+      nombre: 'Robin',
+      vuela: false
+    },
+    {
+      nombre: 'Aquaman',
+      vuela: false
+    },
+  ]
+
+  // Async Pipe
+  miObservable = interval(1000);
+
+  valorPromesa = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve( 'Tenemos data de promesa');
+    }, 3500);
+  })
 }
